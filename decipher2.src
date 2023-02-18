@@ -1,0 +1,43 @@
+cryptools = include_lib("/lib/crypto.so")
+if not cryptools then exit("Error: Missing crypto library")
+
+GetPassword = function(userPass)
+	// First modification: remove the hardcoded reference to a file
+	if userPass.len != 2 then exit("decipher: wrong syntax")
+	password = cryptools.decipher(userPass[1])
+	return password
+end function
+
+if params.len != 1 or params[0] == "-h" or params[0] == "--help" then exit(command_info("decipher_usage"))
+
+origFile = params[0]
+file = get_shell.host_computer.File(origFile)
+// Second modification: treat a non-file parameter as a value to decrypt
+if not file then
+	if origFile.indexOf(":") == null then exit("decipher: can't find " + origFile)
+	lines = [origFile]
+else
+	if not file.has_permission("r") then exit("can't read file. Permission denied")
+	if file.size == 0 then exit("decipher: no users found")
+	lines = file.get_content().split("\n")
+end if
+
+results = []
+// Third modification: instead of selecting one of the lines, decrypt them all
+for line in lines
+	userPass = line.split(":")
+	print("User: " + userPass[0] + " Deciphering...")
+	password = GetPassword(userPass)	
+	
+	results = results + [userPass[0] + " - " + password]
+end for
+
+output_file = get_shell.host_computer.File(file.path + ".dec")
+if not output_file then
+    get_shell.host_computer.touch(file.parent.path, file.name + ".dec")
+    output_file = get_shell.host_computer.File(file.path + ".dec")
+end if
+result_s = results.join("\n")
+output_file.set_content(result_s)
+print("Finished! Results written to " + output_file.path)
+print(result_s)

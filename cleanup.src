@@ -1,0 +1,4 @@
+import_code("/home/bigd/programs/init.inc.src")
+
+if params.len != 1 or params[0] == "-h" or params[0] == "--help" then exit("cleanup [USER]")
+_cleanup_base_commands(params[0])

@@ -1,0 +1,75 @@
+prefix = []
+
+for i in params[0].split(".")
+    prefix.push(i.to_int)
+end for
+
+rest = []
+for i in range(0, 3 - prefix.len)
+    rest.push(0)
+end for
+
+scanned = 0
+
+while true
+    rest[rest.len - 1] = rest[rest.len - 1] + 1
+    if(rest[rest.len - 1] == 256) then
+        rest[rest.len - 1] = 1
+        if rest.len >= 2 then
+            rest[rest.len - 2] = rest[rest.len - 2] + 1
+            if(rest[rest.len - 2] == 256) then
+                rest[rest.len - 2] = 1
+                if rest.len >= 3 then
+                    rest[rest.len - 3] = rest[rest.len - 3] + 1
+                    if rest[rest.len - 3] == 256 then
+                        break
+                    end if
+                else 
+                    break
+                end if
+            end if
+        else 
+            break
+        end if 
+    end if
+
+    ip_parts = []
+    for i in range(0, prefix.len - 1)
+        ip_parts.push(prefix[i])
+    end for
+
+    for i in range(0, rest.len - 1)
+        ip_parts.push(rest[i])
+    end for
+
+	ip = ip_parts.join(".")
+
+    router_ip_parts = ip_parts[0:]
+    router_ip_parts[-1] = 1
+    router_ip = router_ip_parts.join(".")
+
+    scanned = scanned + 1
+
+	router = get_router(router_ip)
+    if not router then
+        continue
+    end if
+
+    if not get_shell.ping(ip) then
+        continue
+    end if
+
+    if(router_ip == ip) then
+        ports = router.used_ports
+    else
+        ports = router.device_ports(ip)
+    end if
+
+    print ip
+	for port in ports
+		info = router.port_info(port)
+		print port.port_number + " : " + info
+	end for
+end while
+
+print("Scanned " + scanned + " IPs")

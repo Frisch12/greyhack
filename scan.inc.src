@@ -1,0 +1,18 @@
+_print_vuln = function(metaxploit, metaLib, results) 
+    for res in results 
+        print(res + ":")
+        scan_result = metaxploit.scan_address(metaLib, res)
+        if not scan_result then 
+            print("\tFailed!")
+            continue
+        end if 
+
+        print(scan_result)
+    end for
+end function
+
+_scan_vuln = function(metaxploit, metaLib) 
+    print("Scanning " + metaLib.lib_name + " Version " + metaLib.version)
+    results = metaxploit.scan(metaLib)
+    _print_vuln(metaxploit, metaLib, results)
+end function

@@ -1,0 +1,3 @@
+lf = get_shell.host_computer.File("/var/system.log")
+print(lf.is_binary)
+print(lf.get_content())

@@ -1,0 +1,76 @@
+_load_lib = function(name)
+    library = include_lib("/lib/" + name)
+    if not library then
+        library = include_lib(current_path + "/" + name)
+    end if
+    if not library then exit("Error: Can't find " + name + " library in the /lib path or the current folder")
+    return library
+end function
+
+_load_metasploit = function()
+    return _load_lib("metaxploit.so")
+end function
+
+_load_metalib = function(metaxploit, library)
+    metalib = metaxploit.load("/lib/" + library)
+    if not metalib then
+        metalib = metaxploit.load(current_path + "/" + library)
+    end if 
+    if not metalib then exit("Error: Can't find " + library + " in /lib or current folder")
+    print("Loaded " + metalib.lib_name + " Version " + metalib.version)
+    return metalib
+end function
+
+_test_exploits = function(library, exploits)
+     for e in exploits
+        if e.hasIndex(2) then
+            result = library.overflow(e[0], e[1], e[2])
+        else 
+            result = library.overflow(e[0], e[1])
+        end if
+        if result != null then
+            return result
+        end if 
+     end for
+     return null
+end function
+
+_default_params_check = function()
+    if params.len != 2 or params[0] == "-h" or params[0] == "--help" then exit("<b>Usage: "+program_path.split("/")[-1]+" [ip_address] [port]</b>")
+end function
+
+_exploit_remote = function(exploits) 
+    metaxploit = _load_metasploit
+    con = metaxploit.net_use(params[0], params[1].to_int)
+    if not con then
+        exit("Connection error")
+    end if
+    metaLib = con.dump_lib()
+
+    print("Loaded " + metaLib.lib_name + " Version " + metaLib.version)
+
+    res = _test_exploits(metaLib, exploits)
+    if not res then 
+        print("Failed to exploit " + metaLib.lib_name)
+        return null
+    end if
+    return res
+end function
+
+_exploit_remote_router = function(exploits) 
+    metaxploit = _load_metasploit
+    con = metaxploit.net_use(params[0])
+    if not con then
+        exit("Connection error")
+    end if
+    metaLib = con.dump_lib()
+
+    print("Loaded " + metaLib.lib_name + " Version " + metaLib.version)
+
+    res = _test_exploits(metaLib, exploits)
+    if not res then 
+        print("Failed to exploit " + metaLib.lib_name)
+        return null
+    end if
+    return res
+end function

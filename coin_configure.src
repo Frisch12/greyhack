@@ -1,0 +1,12 @@
+import_code("/home/bigd/programs/basic.inc.src")
+ 
+bc = _load_lib("blockchain.so")
+coin = bc.get_coin(params[0], params[1], params[2])
+
+print(coin)
+//Set the reward given at the end of each mine cycle (in this case 1 coin)
+coin.set_reward(1)
+//Assign the hours (game time) that each mining cycle lasts. When a cycle ends, it is decided who //gets the reward (in this case 1hr)
+coin.set_cycle_mining(1)
+
+coin.set_address("205.32.164.149")

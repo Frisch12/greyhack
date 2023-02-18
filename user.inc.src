@@ -1,0 +1,4 @@
+_ask_for_user = function()
+    result = user_input("Type username you see above: ")
+    return result
+end function

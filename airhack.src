@@ -1,0 +1,39 @@
+cryptools = include_lib("/lib/crypto.so")
+if not cryptools then exit("Error: Missing crypto library")
+
+if params.len < 2 or params[0] == "--help" then
+	exit("airhack [DEVICE] [SSID]")
+end if
+
+network_device = params[0]
+
+cryptools.airmon("start", network_device)
+
+networks = get_shell.host_computer.wifi_networks(network_device)
+
+essid = params[1]
+bssid = ""
+
+for f in networks
+    parts = f.split(" ")
+    if parts[2] == essid then
+        bssid = parts[0]
+        break
+    end if
+end for
+
+if bssid == "" then
+    print("Network not found!")
+    print(networks)
+    exit
+else
+    print("Start capturing network: " + essid + " " + bssid)
+end if
+
+if not params.hasIndex(2) or params[2] != "--skip-capture" then
+    cryptools.aireplay(bssid, essid, 7000)
+end if
+cryptools.airmon("stop", network_device)
+network_password = cryptools.aircrack(home_dir + "/file.cap")
+
+print("Password: " + network_password)

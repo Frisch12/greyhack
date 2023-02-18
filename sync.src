@@ -1,0 +1,5 @@
+servers = get_shell.host_computer.File("/home/" + active_user + "/servers.txt").get_content.split("\n")
+
+for server in servers 
+    
+end for

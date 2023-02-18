@@ -1,0 +1,16 @@
+import_code("/home/bigd/programs/knowns.inc.src")
+
+username = params[0]
+
+for p in PASSWORDS
+    pws = _variate_password(p)
+    for pv in pws
+        mail = mail_login(username, pv)
+        if typeof(mail) != "MetaMail" then
+            continue
+        else 
+            print(pv)
+            break
+        end if
+    end for
+end for
