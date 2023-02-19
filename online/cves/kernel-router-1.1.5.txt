@@ -1,0 +1,21 @@
+0x17F40998:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in text. Buffer overflow.
+-> Shell (guest)
+
+Unsafe check: string copy in bool. Buffer overflow.
+* Checking existing connection in the local network.
+
+
+0xC385913:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in platecttransforward. Buffer overflow.
+-> Disable Firewall
+
+Unsafe check: string copy in verlayonandata_ty. Buffer overflow.
+-> Shell (guest)
+
+Unsafe check: loop in array widthisinp. Buffer overflow.
+* Checking existing connection in the local network.

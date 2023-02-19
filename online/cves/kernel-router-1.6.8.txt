@@ -2,8 +2,10 @@
 decompiling source...
 searching unsecure values...
 Unsafe check: loop in array ightminusb. Buffer overflow.
+-> Disable firewall
 
 Unsafe check: loop in array newindownevelis. Buffer overflow.
+-> Disable firewall
 
 
 0x5958A856:
