@@ -1,0 +1,22 @@
+0x2173DC79:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array scii_fresu. Buffer overflow.
+-> Shell
+
+Unsafe check: string copy in texttestringsu. Buffer overflow.
+-> Firewall Config
+
+
+0x417CD897:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in ethisobjectsettextinternalconserty. Buffer overflow.
+-> Firewall Config
+
+Unsafe check: string copy in ultvmyieldingsu. Buffer overflow.
+* Checking existing connection in the local network.
+
+Unsafe check: string copy in n_ltreeli. Buffer overflow.
+* 1 computers using this router as gateway.
+-> Computer

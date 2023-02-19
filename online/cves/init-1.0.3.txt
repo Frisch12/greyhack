@@ -1,0 +1,119 @@
+0x1E4B0C10:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in seloop. Buffer overflow.
+-> Computer
+
+Unsafe check: loop in array dostrollx. Buffer overflow.
+* Checking an active user.
+-> Change Password
+
+Unsafe check: string copy in dostanchormanchorttextvmyieldin. Buffer overflow.
+* Checking an active user.
+-> Change Password
+
+Unsafe check: string copy in head. Buffer overflow.
+* Using namespace kernel_module.so compiled at version >= 1.0.0
+-> Shell
+
+Unsafe check: loop in array unctiondent_o. Buffer overflow.
+* Checking registered users equal to 3.
+-> Computer
+
+
+0x26FE9EA2:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in note. Buffer overflow.
+* Using namespace kernel_module.so compiled at version >= 1.0.0
+-> Computer
+
+Unsafe check: string copy in elengthcodeltaddpa. Buffer overflow.
+* Checking root active user.
+* Checking registered users equal to 3.
+
+Unsafe check: loop in array ekeycodeadeintrinfon. Buffer overflow.
+* Checking an active user.
+-> Computer
+
+Unsafe check: string copy in aplush. Buffer overflow.
+* Checking registered users equal to 4.
+-> Change Password
+
+Unsafe check: string copy in tontypeopend. Buffer overflow.
+* Checking root active user.
+
+0x525595F9:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array rhsa. Buffer overflow.
+* Checking registered users equal to 3.
+* Checking an active user.
+-> Computer
+
+Unsafe check: string copy in _codecinpu. Buffer overflow.
+* Checking an active user.
+* Checking registered users equal to 2.
+* Using namespace kernel_module.so compiled at version >= 1.0.0
+-> Change Password
+
+Unsafe check: loop in array text. Buffer overflow.
+* Checking an active user.
+* Using namespace kernel_module.so compiled at version >= 1.0.0
+-> File
+
+
+0x71BB1FDC:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array onteralsstac. Buffer overflow.
+* Checking registered users equal to 2.
+* Checking an active user.
+-> Change Password
+
+Unsafe check: loop in array icevolumericid. Buffer overflow.
+* Checking root active user.
+
+Unsafe check: string copy in formalcontextsizewima. Buffer overflow.
+* Checking registered users equal to 1.
+* Checking root active user.
+
+
+
+0x472297A1:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in itletefferremove. Buffer overflow.
+* Checking root active user.
+* Checking registered users equal to 2.
+
+Unsafe check: string copy in audiosoundostanc. Buffer overflow.
+* Checking registered users equal to 1.
+* Using namespace net.so compiled at version >= 1.0.1
+* Checking an active user.
+-> File
+
+Unsafe check: loop in array imessto. Buffer overflow.
+* Checking registered users equal to 2.
+* Checking root active user.
+* Using namespace kernel_module.so compiled at version >= 1.0.0
+
+Unsafe check: string copy in textreelefonto. Buffer overflow.
+* Using namespace kernel_module.so compiled at version >= 1.0.2
+* Checking registered users equal to 1.
+* Checking root active user.
+
+
+0x7A9BFF01:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in or_buttonshorline. Buffer overflow.
+* Checking root active user.
+
+Unsafe check: string copy in plushp. Buffer overflow.
+* Checking registered users equal to 2.
+* Checking root active user.
+
+Unsafe check: loop in array opconclick. Buffer overflow.
+* Checking root active user.
+* Checking registered users equal to 4.

@@ -1,0 +1,79 @@
+0x245278E7:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array parama. Buffer overflow.
+* Using namespace kernel_module.so compiled at version >= 1.0.1
+* Checking an active user.
+* 3 port forwarding configured from router to the target computer.
+
+Unsafe check: string copy in mlock0. Buffer overflow.
+* Checking registered users equal to 4.
+* 1 port forwarding configured from router to the target computer.
+* Checking an active user.
+
+Unsafe check: loop in array smax_block_sizelinerbuttonstanchor. Buffer overflow.
+-> Change Password
+
+
+0xBC51646:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in texteffec. Buffer overflow.
+* Using namespace init.so compiled at version >= 1.0.3
+* Checking registered users equal to 4.
+
+Unsafe check: string copy in sforwardoubledittese. Buffer overflow.
+-> Computer (guest)
+
+Unsafe check: string copy in pres. Buffer overflow.
+* Checking an active user.
+* Using namespace kernel_module.so compiled at version >= 1.0.3
+
+Unsafe check: loop in array lategy. Buffer overflow.
+* Checking an active user.
+* Checking registered users equal to 3.
+* Using namespace kernel_module.so compiled at version >= 1.0.1
+
+Unsafe check: loop in array finittextu. Buffer overflow.
+* Using namespace kernel_module.so compiled at version >= 1.0.0
+-> File (root)
+
+0x245278E7:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array parama. Buffer overflow.
+* Using namespace kernel_module.so compiled at version >= 1.0.1
+* Checking an active user.
+* 3 port forwarding configured from router to the target computer.
+
+Unsafe check: string copy in mlock0. Buffer overflow.
+* Checking registered users equal to 4.
+* 1 port forwarding configured from router to the target computer.
+* Checking an active user.
+
+Unsafe check: loop in array smax_block_sizelinerbuttonstanchor. Buffer overflow.
+-> Change Password
+
+
+0xBC51646:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in texteffec. Buffer overflow.
+* Using namespace init.so compiled at version >= 1.0.3
+* Checking registered users equal to 4.
+
+Unsafe check: string copy in sforwardoubledittese. Buffer overflow.
+-> Computer (guest)
+
+Unsafe check: string copy in pres. Buffer overflow.
+* Checking an active user.
+* Using namespace kernel_module.so compiled at version >= 1.0.3
+
+Unsafe check: loop in array lategy. Buffer overflow.
+* Checking an active user.
+* Checking registered users equal to 3.
+* Using namespace kernel_module.so compiled at version >= 1.0.1
+
+Unsafe check: loop in array finittextu. Buffer overflow.
+* Using namespace kernel_module.so compiled at version >= 1.0.0
+-> File (root)

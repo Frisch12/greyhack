@@ -1,0 +1,45 @@
+0x7DA17DB2:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array tor2. Buffer overflow.
+* Checking an active user.
+* Using namespace net.so compiled at version >= 1.0.0
+-> Shell
+
+Unsafe check: string copy in reecurscheckremoveexis. Buffer overflow.
+
+Unsafe check: loop in array mapma. Buffer overflow.
+* Checking root active user.
+
+Unsafe check: string copy in evw_maskth. Buffer overflow.
+* Using namespace net.so compiled at version >= 1.0.0
+
+Unsafe check: loop in array atch_. Buffer overflow.
+
+
+0x37D5EF6D:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array deflavo. Buffer overflow.
+* Using namespace net.so compiled at version >= 1.0.2
+* Checking registered users equal to 3.
+
+Unsafe check: loop in array more. Buffer overflow.
+* Checking registered users equal to 4.
+* Checking root active user.
+
+Unsafe check: loop in array iterrorifnoteoutpritextsline. Buffer overflow.
+* Using namespace init.so compiled at version >= 1.0.1
+
+
+0x1A6FB580:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in _endposi. Buffer overflow.
+* Checking root active user.
+* Using namespace net.so compiled at version >= 1.0.1
+
+Unsafe check: string copy in gionfontai. Buffer overflow.
+
+Unsafe check: loop in array tionaryeresiz. Buffer overflow.
+* Checking root active user.

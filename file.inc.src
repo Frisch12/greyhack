@@ -1,0 +1,53 @@
+_find_root = function(src)
+    if(src.path == "/") then return src
+    res = src
+    while res.path != "/"
+        res = res.parent
+        if res == null then return null
+    end while
+    return res
+end function
+
+_find_single_folder = function(src, folder) 
+    folders = src.get_folders
+    res = null
+    for f in folders
+        if f.name == folder then
+            res = f
+            break
+        end if
+    end for
+    return res
+end function
+
+_find_single_file = function(src, filename) 
+    files = src.get_files
+    res = null
+    for f in files
+        if f.name == filename then
+            res = f
+            break
+        end if
+    end for
+    return res
+end function
+
+_find_folder = function (src, dst_path)
+    file = src
+    paths = dst_path[1:].split("/")
+    for path in paths
+        file = _find_single_folder(file, path)
+        if file == null then return null
+    end for
+    return file
+end function
+
+_find_file = function(src, dst_path) 
+    paths = dst_path[1:].split("/")
+    folder = "/" + paths[:-1].join("/")
+    parent = _find_folder(src, folder)
+    if parent == null then return null
+
+    filename = paths[-1:][0]
+    return _find_single_file(parent, filename)
+end function

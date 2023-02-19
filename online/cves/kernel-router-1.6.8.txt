@@ -1,0 +1,22 @@
+0x76E0BF7:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array ightminusb. Buffer overflow.
+
+Unsafe check: loop in array newindownevelis. Buffer overflow.
+
+
+0x5958A856:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array compatic_treelin. Buffer overflow.
+
+Unsafe check: string copy in zefinishstackg. Buffer overflow.
+
+Unsafe check: string copy in raycaseonclicitreem. Buffer overflow.
+
+Unsafe check: loop in array ript. Buffer overflow.
+* Checking existing connection in the local network.
+
+Unsafe check: string copy in justcoroutlined. Buffer overflow.
+* Checking existing connection in the local network.

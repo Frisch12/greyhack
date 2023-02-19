@@ -1,0 +1,106 @@
+0x6A9AB575:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in ine. Buffer overflow.
+* Checking root active user.
+* 2 port forwarding configured from router to the target computer.
+-> shell (guest)
+
+Unsafe check: loop in array set. Buffer overflow.
+-> File (guest)
+
+
+0x1FD7E3C8:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array double. Buffer overflow.
+* 1 port forwarding configured from router to the target computer.
+* Checking an active user.
+-> Change Password
+
+Unsafe check: loop in array lexde. Buffer overflow.
+* 3 port forwarding configured from router to the target computer.
+* Checking root active user.
+* Checking registered users equal to 2.
+-> Computer
+
+Unsafe check: loop in array _eobjectset. Buffer overflow.
+* Checking an active user.
+* Checking registered users equal to 3.
+* Using namespace kernel_module.so compiled at version >= 1.0.1
+
+Unsafe check: loop in array mancessagecolor_viewportbi_valfuncti. Buffer overflow.
+* Checking registered users equal to 3.
+* Using namespace net.so compiled at version >= 1.0.0
+* Checking root active user.
+
+
+0x23DF1724:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array sor1. Buffer overflow.
+* 2 port forwarding configured from router to the target computer.
+* Checking root active user.
+-> Change Password
+
+Unsafe check: string copy in gthoffsetitle. Buffer overflow.
+* Checking registered users equal to 2.
+* Checking root active user.
+-> Shell
+
+
+0x30F059F9:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in select. Buffer overflow.
+* Using namespace init.so compiled at version >= 1.0.0
+* Checking root active user.
+-> Shell
+
+Unsafe check: loop in array sremovebuttom. Buffer overflow.
+* Checking an active user.
+
+Unsafe check: string copy in fill. Buffer overflow.
+* Checking root active user.
+* Checking registered users equal to 4.
+
+Unsafe check: loop in array curshightmi. Buffer overflow.
+* Checking root active user.
+* 2 port forwarding configured from router to the target computer.
+
+Unsafe check: loop in array extslconnex. Buffer overflow.
+* Checking registered users equal to 3.
+* Checking root active user.
+
+
+0x6FEDF4A5:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in utlines. Buffer overflow.
+* 3 port forwarding configured from router to the target computer.
+* Checking an active user.
+
+Unsafe check: string copy in tonstartpositionnextsremove. Buffer overflow.
+* 1 port forwarding configured from router to the target computer.
+* Checking an active user.
+
+Unsafe check: loop in array lessiobj. Buffer overflow.
+* 1 port forwarding configured from router to the target computer.
+
+Unsafe check: loop in array ishstactio. Buffer overflow.
+* 1 port forwarding configured from router to the target computer.
+
+
+0x704D2200:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in lor_titletry. Buffer overflow.
+
+Unsafe check: string copy in eatelending_d. Buffer overflow.
+* Checking an active user.
+* Using namespace net.so compiled at version >= 1.1.0
+
+Unsafe check: string copy in emoveatelistenercolor. Buffer overflow.
+* Checking registered users equal to 3.
+* Checking an active user.
+* Using namespace kernel_module.so compiled at version >= 1.0.1

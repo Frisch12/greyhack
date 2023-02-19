@@ -1,0 +1,70 @@
+0x1BDA14B0:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array block_onlyflush_m. Buffer overflow.
+* Checking registered users equal to 4.
+
+Unsafe check: string copy in ollresetde. Buffer overflow.
+* Checking registered users equal to 3.
+* Checking root active user.
+
+Unsafe check: string copy in uesaddgetpivot. Buffer overflow.
+* Checking registered users equal to 4.
+* Using namespace init.so compiled at version >= 1.0.0
+* Checking an active user.
+
+Unsafe check: loop in array _endist. Buffer overflow.
+* Checking an active user.
+
+
+0x132FA2E1:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in pointextingcoun. Buffer overflow.
+* Checking an active user.
+* Using namespace kernel_module.so compiled at version >= 1.0.1
+* 1 port forwarding configured from router to the target computer.
+
+Unsafe check: loop in array tinusb. Buffer overflow.
+* 2 port forwarding configured from router to the target computer.
+* Checking root active user.
+
+
+0x14F5FB67:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array cast. Buffer overflow.
+-> File
+
+Unsafe check: loop in array listenertypebottontyperin. Buffer overflow.
+* Checking registered users equal to 1.
+* Using namespace kernel_module.so compiled at version >= 1.0.4
+* Checking root active user.
+
+Unsafe check: string copy in imatchemeimationpara. Buffer overflow.
+* Checking root active user.
+
+
+0x561144AD:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array adcolorscrollre. Buffer overflow.
+* Using namespace kernel_module.so compiled at version >= 1.0.1
+-> Shell (guest)
+
+Unsafe check: loop in array greach. Buffer overflow.
+* 1 port forwarding configured from router to the target computer.
+* Using namespace init.so compiled at version >= 1.0.2
+* Checking an active user.
+
+
+0x11FF41C5:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array ut_bytebuttonob. Buffer overflow.
+* Checking registered users equal to 4.
+* Checking an active user.
+
+Unsafe check: loop in array buffec. Buffer overflow.
+* Checking registered users equal to 4.
+* Checking root active user.

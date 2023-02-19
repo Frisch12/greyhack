@@ -1,0 +1,19 @@
+type = ""
+ps = get_shell.host_computer.show_procs
+hasXorg = "false"
+hasdsession = "false"
+for line in ps.split("\n")
+	if line.split(" ")[4] == "Xorg" then
+		hasXorg = "true" 
+	end if
+	if line.split(" ")[4] == "dsession" then
+		hasdsession = "true" 
+		end if
+end for
+if hasXorg == "true" then
+	type = "player"
+end if
+if hasdsession == "true" then
+	type = "npc"
+end if
+print(type)

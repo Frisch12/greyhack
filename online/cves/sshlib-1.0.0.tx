@@ -1,0 +1,55 @@
+0x2E1E1D95:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array odec_adlend_treeliternalconc. Buffer overflow.
+* Checking registered users equal to 1.
+* Using namespace init.so compiled at version >= 1.0.0
+* Checking an active user.
+
+Unsafe check: loop in array olor_viewportli. Buffer overflow.
+* Using namespace kernel_module.so compiled at version >= 1.0.0
+-> Computer (guest)
+
+Unsafe check: string copy in positialis. Buffer overflow.
+* Checking root active user.
+
+Unsafe check: loop in array hiftitleba. Buffer overflow.
+* Checking an active user.
+* Checking registered users equal to 2.
+
+
+0x61FE5330:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in delanchortt. Buffer overflow.
+* Checking an active user.
+
+Unsafe check: loop in array in_frequ. Buffer overflow.
+* Checking an active user.
+
+Unsafe check: loop in array showbuttonstancho. Buffer overflow.
+* 2 port forwarding configured from router to the target computer.
+* Checking an active user.
+
+
+0x1DAAEAC8:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in updata_typerinsicreetru. Buffer overflow.
+* Checking root active user.
+* 1 port forwarding configured from router to the target computer.
+
+Unsafe check: loop in array rount++. Buffer overflow.
+* Checking an active user.
+* Using namespace net.so compiled at version >= 1.0.0
+
+
+0x5A5F23D9:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in sizedeltaddlisterderrorig. Buffer overflow.
+* Checking registered users equal to 2.
+-> Computer
+
+Unsafe check: loop in array witch_. Buffer overflow.
+* Checking root active user.

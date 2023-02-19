@@ -1,0 +1,18 @@
+import_code("/home/bigd/programs/knowns.inc.src")
+
+if params.len != 1 or params[0] == "-h" or params[0] == "--help" then exit("<b>Usage: "+program_path.split("/")[-1]+" [file]</b>")
+
+pwfile = get_shell.host_computer.File(params[0])
+pw_content = pwfile.get_content.split("\n")
+
+for entry in pw_content
+    entry_parts = entry.split(":")
+    if entry_parts.len < 2 then continue
+    for p in PASSWORDS
+        hashed = md5(p)
+        if hashed == entry_parts[1] then
+            print(entry_parts[0] + " - " + p)
+            break
+        end if
+    end for
+end for

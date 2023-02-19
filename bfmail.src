@@ -1,0 +1,15 @@
+import_code("/home/bigd/programs/knowns.inc.src")
+
+if params.len != 1 or params[0] == "-h" or params[0] == "--help" then exit("<b>Usage: "+program_path.split("/")[-1]+" [username]</b>")
+
+username = params[0]
+
+for p in PASSWORDS
+    mail = mail_login(username, p)
+    if typeof(mail) != "MetaMail" then
+        continue
+    else 
+        print(p)
+        break
+    end if
+end for

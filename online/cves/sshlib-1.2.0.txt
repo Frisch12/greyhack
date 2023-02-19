@@ -1,0 +1,76 @@
+0x312620A0:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in tializedelc. Buffer overflow.
+* Checking registered users equal to 2.
+* Checking root active user.
+
+Unsafe check: string copy in watch_le. Buffer overflow.
+
+
+0x67219771:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in eoutlengthsdyn_ltr. Buffer overflow.
+* 1 port forwarding configured from router to the target computer.
+-> Change Password
+
+Unsafe check: string copy in addlinenumsizedelaybackg. Buffer overflow.
+-> Change Password
+
+
+0x52B6383B:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array setrue. Buffer overflow.
+* Checking an active user.
+* Using namespace net.so compiled at version >= 1.0.0
+* Checking registered users equal to 4.
+
+Unsafe check: string copy in treelit_but. Buffer overflow.
+* 1 port forwarding configured from router to the target computer.
+-> Change Password
+
+
+0x74AC29E2:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in eaderrorifnotex. Buffer overflow.
+* Checking registered users equal to 4.
+-> Computer
+
+Unsafe check: string copy in nent_onclicked. Buffer overflow.
+* Checking an active user.
+* Using namespace init.so compiled at version >= 1.0.7
+
+Unsafe check: loop in array sizewimagecompone. Buffer overflow.
+-> Shell
+
+Unsafe check: string copy in byb. Buffer overflow.
+* Checking root active user.
+
+Unsafe check: loop in array odestrinforman. Buffer overflow.
+* Checking registered users equal to 4.
+-> Change Password
+
+
+0x20191C1C:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array maskthisl. Buffer overflow.
+* 1 port forwarding configured from router to the target computer.
+-> File (root)
+
+Unsafe check: loop in array textsirecttransforminu. Buffer overflow.
+-> File
+
+Unsafe check: string copy in spushpa. Buffer overflow.
+* Checking registered users equal to 3.
+* Using namespace init.so compiled at version >= 1.1.1
+
+Unsafe check: loop in array sizedeltadd. Buffer overflow.
+* Checking root active user.
+* Using namespace init.so compiled at version >= 1.1.0
+
+Unsafe check: string copy in mode. Buffer overflow.
+* Checking an active user.

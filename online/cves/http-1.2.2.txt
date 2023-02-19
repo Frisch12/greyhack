@@ -1,0 +1,22 @@
+0x6FF531F7:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array donentex. Buffer overflow.
+* 1 port forwarding configured from router to the target computer.
+* Checking registered users equal to 4.
+* Checking an active user.
+
+Unsafe check: loop in array viewportmsbintoff. Buffer overflow.
+* Checking root active user.
+* 1 port forwarding configured from router to the target computer.
+
+Unsafe check: string copy in curle. Buffer overflow.
+* Checking registered users equal to 4.
+
+Unsafe check: loop in array x++. Buffer overflow.
+* Checking registered users equal to 2.
+* Using namespace net.so compiled at version >= 1.0.2
+* Checking an active user.
+
+Unsafe check: string copy in gspush_. Buffer overflow.
+* Checking an active user.

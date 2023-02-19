@@ -1,0 +1,12 @@
+
+if params.len != 2 or params[0] == "-h" or params[0] == "--help" then exit("<b>Usage: "+program_path.split("/")[-1]+" [username] [password]</b>")
+
+mail_acc = mail_login(params[0], params[1])
+
+mails = mail_acc.fetch()
+
+if mails.len <= 0 then exit("No mails")
+
+for mail in mails
+    print(mail)
+end for

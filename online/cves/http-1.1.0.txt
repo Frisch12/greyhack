@@ -1,0 +1,78 @@
+0x5DFEE7B7:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in powbu. Buffer overflow.
+* Checking registered users equal to 1.
+* Checking root active user.
+* 1 port forwarding configured from router to the target computer.
+
+Unsafe check: string copy in rinserigsizedel. Buffer overflow.
+* Using namespace init.so compiled at version >= 1.0.0
+* Checking registered users equal to 1.
+* Checking root active user.
+
+Unsafe check: loop in array treelit++. Buffer overflow.
+* Checking root active user.
+* 3 port forwarding configured from router to the target computer.
+
+
+0x45C1DA49:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in addparacterrorigsizedelt. Buffer overflow.
+* Checking registered users equal to 3.
+
+Unsafe check: loop in array equalby. Buffer overflow.
+* Checking an active user.
+* 3 port forwarding configured from router to the target computer.
+* Checking registered users equal to 4.
+
+
+0x17A89E61:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array labledthi. Buffer overflow.
+* Checking an active user.
+
+Unsafe check: loop in array onbuttonobjectset. Buffer overflow.
+* Checking an active user.
+* 2 port forwarding configured from router to the target computer.
+* Checking registered users equal to 2.
+
+Unsafe check: loop in array buttonclosefalsdyn_ltreecur. Buffer overflow.
+-> Change Password
+
+
+0x3853AAF6:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array ored_bitlend_bi. Buffer overflow.
+* 2 port forwarding configured from router to the target computer.
+* Checking an active user.
+
+Unsafe check: string copy in jecttransformof. Buffer overflow.
+* 2 port forwarding configured from router to the target computer.
+* Checking registered users equal to 2.
+-> Shell (guest)
+
+
+0x222E7342:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array testroybuttonishdonenu. Buffer overflow.
+* Checking root active user.
+* 1 port forwarding configured from router to the target computer.
+* Checking registered users equal to 4.
+
+Unsafe check: loop in array linenumsirec. Buffer overflow.
+* Checking registered users equal to 3.
+
+Unsafe check: string copy in tebuttontsrc. Buffer overflow.
+* Checking registered users equal to 3.
+* Checking an active user.
+* 1 port forwarding configured from router to the target computer.
+
+Unsafe check: string copy in ourcelectsetvarven. Buffer overflow.
+* Checking registered users equal to 2.
+* Using namespace kernel_module.so compiled at version >= 1.0.0
+* Checking root active user.

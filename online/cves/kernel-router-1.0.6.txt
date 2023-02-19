@@ -1,0 +1,18 @@
+0x1D6FA55C:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in hortshortletree. Buffer overflow.
+
+Unsafe check: string copy in forequalbytes. Buffer overflow.
+-> Computer from lan
+
+Unsafe check: loop in array engthsdyn_dtr. Buffer overflow.
+-> Disable Firewall
+
+
+0x2440E3DF:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array paramesbuild. Buffer overflow.
+
+Unsafe check: loop in array agecodeenov. Buffer overflow.

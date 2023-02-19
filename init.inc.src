@@ -1,37 +1,41 @@
-INIT_COMMANDS=["nmap", "scan", "scanremote", "scanrouter", "allpasswords", "testexploit", "testexploitLocal", "testexploitRouter", "rshell", "cleanup"]
+INIT_COMMANDS=["nmap", "scan", "scanremote", "allpasswords", "testexploit", "testexploitLocal", "exploitcomputer", "exploitssh", "exploitlibShell", "exploitfile", "rshell", "cleanup"]
 INIT_PROGRAMS=["ScanLan.exe"]
 INIT_LIBS=["metaxploit.so", "librshell.so"]
 
 _init_base_commands = function(shell, user)
+    home_path = "/home/" + user + "/"
+    if user == "root" then home_path = "/root/"
     print("Init remote host")
     for c in INIT_LIBS
         print("Copy lib " + c)
-        get_shell.scp("/lib/" + c, "/home/" + user, shell)
+        get_shell.scp("/lib/" + c, home_path, shell)
     end for
     for c in INIT_PROGRAMS
         print("Copy program " + c)
-        get_shell.scp("/usr/bin/" + c, "/home/" + user, shell)
+        get_shell.scp("/usr/bin/" + c, home_path, shell)
     end for
     for c in INIT_COMMANDS
         print("Copy program " + c)
-        get_shell.scp("/bin/" + c, "/home/" + user, shell)
+        get_shell.scp("/bin/" + c, home_path, shell)
     end for
     print("Finished")
 end function
 
 _cleanup_base_commands = function(user)
+    home_path = "/home/" + user + "/"
+    if user == "root" then home_path = "/root/"
     print("Cleanup")
     for c in INIT_LIBS
         print("Delete lib " + c)
-        get_shell.host_computer.File("/home/" + user + "/" + c).delete()
+        get_shell.host_computer.File(home_path + c).delete()
     end for
     for c in INIT_PROGRAMS
         print("Delete file " + c)
-        get_shell.host_computer.File("/home/" + user + "/" + c).delete()
+        get_shell.host_computer.File(home_path + c).delete()
     end for
     for c in INIT_COMMANDS
         print("Delete file " + c)
-        get_shell.host_computer.File("/home/" + user + "/" + c).delete()
+        get_shell.host_computer.File(home_path + c).delete()
     end for
     print("Finished")
 end function

@@ -1,0 +1,77 @@
+0x245278E7:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in showbuttonclip. Buffer overflow.
+-> File
+
+Unsafe check: string copy in mlock0. Buffer overflow.
+* Checking registered users equal to 4.
+* 1 port forwarding configured from router to the target computer.
+* Checking an active user.
+
+Unsafe check: string copy in reetrue. Buffer overflow.
+* Checking root active user.
+* 1 port forwarding configured from router to the target computer.
+
+
+0x28BF967B:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in ansforedx. Buffer overflow.
+* 2 port forwarding configured from router to the target computer.
+
+Unsafe check: loop in array torsc. Buffer overflow.
+* Using namespace init.so compiled at version >= 1.0.0
+* Checking registered users equal to 2.
+
+Unsafe check: loop in array parame. Buffer overflow.
+
+Unsafe check: loop in array valuesadd. Buffer overflow.
+* Checking root active user.
+
+Unsafe check: string copy in dictreelinentdate. Buffer overflow.
+* Checking root active user.
+
+
+0x1027CAF0:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array color_glo. Buffer overflow.
+* Checking root active user.
+* 1 port forwarding configured from router to the target computer.
+
+Unsafe check: loop in array chortcompresiz. Buffer overflow.
+* Checking registered users equal to 2.
+* 3 port forwarding configured from router to the target computer.
+* Using namespace kernel_module.so compiled at version >= 1.0.1
+
+Unsafe check: string copy in bappendispla. Buffer overflow.
+
+Unsafe check: string copy in tletextsiintertlinesr. Buffer overflow.
+* Checking an active user.
+* Checking registered users equal to 2.
+* 3 port forwarding configured from router to the target computer.
+
+Unsafe check: string copy in toaifb. Buffer overflow.
+* 2 port forwarding configured from router to the target computer.
+
+
+0x24CA5EB3:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in tequalbyte. Buffer overflow.
+* Checking an active user.
+-> Change Password
+
+Unsafe check: string copy in codeen. Buffer overflow.
+* Checking an active user.
+-> Computer (root)
+
+Unsafe check: string copy in ertlinestrins_h. Buffer overflow.
+* Checking an active user.
+* 2 port forwarding configured from router to the target computer.
+-> File
+
+Unsafe check: string copy in tshowcall0. Buffer overflow.
+* Using namespace net.so compiled at version >= 1.0.2
+-> File

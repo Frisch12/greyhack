@@ -1,0 +1,92 @@
+0x5DFEE7B7:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in powbu. Buffer overflow.
+* Checking registered users equal to 1.
+* Checking root active user.
+* 1 port forwarding configured from router to the target computer.
+
+Unsafe check: loop in array ettextransformoffsetactabledthis. Buffer overflow.
+* Using namespace init.so compiled at version >= 1.0.0
+-> Change Password
+
+Unsafe check: loop in array treelit++. Buffer overflow.
+* Checking root active user.
+* 3 port forwarding configured from router to the target computer.
+
+
+0x1A9922C4:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array d_color_gl. Buffer overflow.
+* Checking root active user.
+
+Unsafe check: loop in array intextct. Buffer overflow.
+* Checking root active user.
+* Checking registered users equal to 4.
+
+Unsafe check: string copy in sdyn_ltreeinvokethi. Buffer overflow.
+* Checking registered users equal to 1.
+* 1 port forwarding configured from router to the target computer.
+-> Computer (guest)
+
+Unsafe check: loop in array hightminusb. Buffer overflow.
+* Checking root active user.
+
+
+0x6D53533F:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array izedediategy. Buffer overflow.
+* Checking registered users equal to 1.
+* 1 port forwarding configured from router to the target computer.
+* Checking root active user.
+
+Unsafe check: loop in array available. Buffer overflow.
+* 2 port forwarding configured from router to the target computer.
+-> File
+
+Unsafe check: loop in array shor. Buffer overflow.
+* Checking root active user.
+* 1 port forwarding configured from router to the target computer.
+
+Unsafe check: string copy in sele. Buffer overflow.
+* Checking registered users equal to 1.
+* 3 port forwarding configured from router to the target computer.
+
+
+0x7E140A0C:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in riternalcolor. Buffer overflow.
+* Checking root active user.
+* Checking registered users equal to 3.
+* 2 port forwarding configured from router to the target computer.
+
+Unsafe check: loop in array ackgroundostartpositi. Buffer overflow.
+* Checking an active user.
+* Checking registered users equal to 4.
+* 3 port forwarding configured from router to the target computer.
+
+
+0x1976F1EA:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array modb. Buffer overflow.
+* Checking registered users equal to 3.
+
+Unsafe check: string copy in carentdatel. Buffer overflow.
+* Checking root active user.
+* Using namespace kernel_module.so compiled at version >= 1.0.1
+
+Unsafe check: loop in array lighlighlighlighlight. Buffer overflow.
+* 2 port forwarding configured from router to the target computer.
+* Checking registered users equal to 4.
+* Using namespace init.so compiled at version >= 1.0.0
+
+Unsafe check: loop in array istenert. Buffer overflow.
+-> Shell
+
+Unsafe check: loop in array d_blocksraycas. Buffer overflow.
+* Checking root active user.
+* 1 port forwarding configured from router to the target computer.
