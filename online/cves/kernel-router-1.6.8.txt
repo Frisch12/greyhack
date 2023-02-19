@@ -12,13 +12,18 @@ Unsafe check: loop in array newindownevelis. Buffer overflow.
 decompiling source...
 searching unsecure values...
 Unsafe check: loop in array compatic_treelin. Buffer overflow.
+-> Shell (guest)
 
 Unsafe check: string copy in zefinishstackg. Buffer overflow.
+-> Shell (guest)
 
 Unsafe check: string copy in raycaseonclicitreem. Buffer overflow.
+-> Shell (guest)
 
 Unsafe check: loop in array ript. Buffer overflow.
 * Checking existing connection in the local network.
+-> Computer LAN
 
 Unsafe check: string copy in justcoroutlined. Buffer overflow.
 * Checking existing connection in the local network.
+-> Computer LAN (guest)

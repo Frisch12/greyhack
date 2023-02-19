@@ -1,0 +1,6 @@
+0x575FCFAA:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array rivates. Buffer overflow.
+
+Unsafe check: string copy in actionpointerals. Buffer overflow.
