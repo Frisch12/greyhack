@@ -25,11 +25,6 @@ while retry
     end if 
 end while
 
-init = user_input("Shall init: ")
-
-if init == "y" or init == "yes" or init == "Y" then
-    user = _ask_for_user()
-    _init_base_commands(shell, user)
-end if 
+_init_prompter(shell)
 
 shell.start_terminal

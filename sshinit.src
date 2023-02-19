@@ -1,0 +1,30 @@
+import_code("/home/bigd/programs/init.inc.src")
+import_code("/home/bigd/programs/user.inc.src")
+
+if params.len < 2 or params[0] == "-h" or params[0] == "--help" then exit("<b>Usage: "+program_path.split("/")[-1]+" [user]@[password] [ip_address] [[port]]</b>")
+
+port = 22
+if params.len == 3 then
+    port = params[2].to_int
+    if typeof(port) != "number" then
+        exit("Wrong parameter for port " + params[2])
+    end if
+end if 
+
+username_password = params[0].split("@")
+
+password = null
+username = active_user
+
+if username_password.len == 1 then
+    password = params[0]
+else
+    username = username_password[0]
+    password = username_password[1]
+end if
+
+shell = get_shell.connect_service(params[1], port, username, password)
+
+_init_prompter(shell)
+
+shell.start_terminal

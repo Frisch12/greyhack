@@ -1,0 +1,28 @@
+input = user_input("Are you sure: ")
+
+if input != "yes" then exit
+
+FILENAMES=["metaxploit.so"]
+
+USERNAME="bigd"
+
+_cleanup_file = function (file)
+    if file.owner == "bigd" then
+        print("Delete " + file.path)
+        file.delete
+    end if
+end function
+
+_traverse = function (dir)
+    for fold in dir.get_folders
+        _traverse(fold)
+    end for
+    for file in dir.get_files
+        _cleanup_file(file)
+    end for
+end function
+
+_traverse(get_shell.host_computer.File("/"))
+
+lf = get_shell.host_computer.File("/var/system.log")
+lf.delete

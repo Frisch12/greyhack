@@ -39,3 +39,30 @@ _cleanup_base_commands = function(user)
     end for
     print("Finished")
 end function
+
+__check_result = function(res) 
+    if typeof(res) == "string" then
+        print (res)
+    end if
+end function
+
+_init_prompter = function(shell) 
+    init = user_input("Shall init (y/c/r/n): ")
+
+    if init == "y" or init == "yes" or init == "Y" then
+        user = _ask_for_user()
+        _init_base_commands(shell, user)
+    else if init == "c" or init == "C" then
+        user = _ask_for_user()
+        home_path = "/home/" + user + "/"
+        if user == "root" then home_path = "/root/"
+        __check_result(get_shell.scp("/bin/cleanupall", home_path, shell))
+    else if init == "r" or init == "R" then
+        user = _ask_for_user()
+        home_path = "/home/" + user + "/"
+        if user == "root" then home_path = "/root/"
+        __check_result(get_shell.scp("/bin/cleanupall", home_path, shell))
+        __check_result(get_shell.scp("/bin/rshell", home_path, shell))
+        __check_result(get_shell.scp("/lib/metaxploit.so", home_path, shell))
+    end if 
+end function

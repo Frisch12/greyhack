@@ -1,0 +1,55 @@
+0x2E1E1D95:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array odec_adlend_treeliternalconc. Buffer overflow.
+* Checking registered users equal to 1.
+* Using namespace init.so compiled at version >= 1.0.0
+* Checking an active user.
+
+Unsafe check: loop in array compos. Buffer overflow.
+* Checking registered users equal to 1.
+* Checking root active user.
+
+Unsafe check: string copy in positialis. Buffer overflow.
+* Checking root active user.
+
+Unsafe check: loop in array hiftitleba. Buffer overflow.
+* Checking an active user.
+* Checking registered users equal to 2.
+
+
+0x3C81EE58:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array _adler32. Buffer overflow.
+* Checking an active user.
+
+Unsafe check: string copy in codecflu. Buffer overflow.
+-> Computer (root)
+
+Unsafe check: loop in array neseltaddlistend_c. Buffer overflow.
+* 1 port forwarding configured from router to the target computer.
+* Checking an active user.
+* Using namespace kernel_module.so compiled at version >= 1.0.0
+
+
+0x15122E02:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in lusb. Buffer overflow.
+* Checking root active user.
+* 2 port forwarding configured from router to the target computer.
+
+Unsafe check: loop in array _oncolor_buttonhighli. Buffer overflow.
+* Using namespace kernel_module.so compiled at version >= 1.0.0
+* Checking registered users equal to 3.
+* Checking an active user.
+
+Unsafe check: string copy in urleng. Buffer overflow.
+* Checking an active user.
+
+Unsafe check: loop in array fecttransfocusedthisclos. Buffer overflow.
+* Checking root active user.
+
+Unsafe check: string copy in ourcevolumerigsi. Buffer overflow.
+* 3 port forwarding configured from router to the target computer.
