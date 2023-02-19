@@ -1,0 +1,23 @@
+0x17F40998:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in regroundop. Buffer overflow.
+* Checking existing connection in the local network.
+-> Computer LAN (guest)
+
+Unsafe check: string copy in bool. Buffer overflow.
+* Checking existing connection in the local network.
+-> Computer LAN (guest)
+
+
+0x7EA133BB:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in color_buttonsolewriteract. Buffer overflow.
+-> Disable Firewall
+
+Unsafe check: loop in array stanchorttextefferredpointeralsbu. Buffer overflow.
+-> Computer LAN (guest)
+
+Unsafe check: string copy in dow_sizedel. Buffer overflow.
+-> File (guest)

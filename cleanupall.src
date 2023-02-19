@@ -24,5 +24,9 @@ end function
 
 _traverse(get_shell.host_computer.File("/"))
 
-lf = get_shell.host_computer.File("/var/system.log")
-lf.delete
+log = user_input("Clean logs: ")
+
+if log == "yes" then
+    lf = get_shell.host_computer.File("/var/system.log")
+    lf.delete
+end if

@@ -1,0 +1,78 @@
+0x245278E7:
+decompiling source...
+searching unsecure values...
+Unsafe check: loop in array parama. Buffer overflow.
+* Using namespace kernel_module.so compiled at version >= 1.0.1
+* Checking an active user.
+* 3 port forwarding configured from router to the target computer.
+
+Unsafe check: string copy in mlock0. Buffer overflow.
+* Checking registered users equal to 4.
+* 1 port forwarding configured from router to the target computer.
+* Checking an active user.
+
+Unsafe check: string copy in reetrue. Buffer overflow.
+* Checking root active user.
+* 1 port forwarding configured from router to the target computer.
+
+
+0x1DE6309A:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in merigsi. Buffer overflow.
+* Checking an active user.
+* Using namespace kernel_module.so compiled at version >= 1.0.2
+
+Unsafe check: string copy in viewporttedistemplicelec. Buffer overflow.
+* 3 port forwarding configured from router to the target computer.
+-> Computer (guest)
+
+Unsafe check: loop in array elisedcodecflush_maskthis. Buffer overflow.
+* 2 port forwarding configured from router to the target computer.
+-> Change password (root)
+
+Unsafe check: string copy in ateswitch_length. Buffer overflow.
+* Using namespace net.so compiled at version >= 1.0.2
+* Checking root active user.
+
+Unsafe check: string copy in themecharetundopo. Buffer overflow.
+* 3 port forwarding configured from router to the target computer.
+-> Change Password
+
+
+0x336417D:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in otoai. Buffer overflow.
+* Using namespace kernel_module.so compiled at version >= 1.0.0
+-> File 
+
+Unsafe check: string copy in lint. Buffer overflow.
+* 1 port forwarding configured from router to the target computer.
+* Checking an active user.
+* Checking registered users equal to 4.
+
+Unsafe check: string copy in eventilsursor1. Buffer overflow.
+* Checking registered users equal to 4.
+-> Computer (guest)
+
+Unsafe check: string copy in thistvalfunctiontimesbuild_t. Buffer overflow.
+* Checking an active user.
+* Checking registered users equal to 4.
+
+
+0x6A3DBF30:
+decompiling source...
+searching unsecure values...
+Unsafe check: string copy in _treedyn_dtreedmorev. Buffer overflow.
+* Checking registered users equal to 1.
+-> File (guest)
+
+Unsafe check: string copy in eratorevp. Buffer overflow.
+* Using namespace kernel_module.so compiled at version >= 1.0.1
+-> Computer
+
+Unsafe check: loop in array tericitr. Buffer overflow.
+* Checking registered users equal to 2.
+* Checking root active user.
+* Using namespace net.so compiled at version >= 1.0.1

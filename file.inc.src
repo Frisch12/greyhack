@@ -51,3 +51,25 @@ _find_file = function(src, dst_path)
     filename = paths[-1:][0]
     return _find_single_file(parent, filename)
 end function
+
+_get_file_relative_or_absolute = function(path)
+    res = path
+    if path.indexOf("/") != 0 then
+        res = current_path + "/" + path
+    end if
+    return res
+end function
+
+_get_file_and_create = function(path)
+    file = get_shell.host_computer.File(path)
+    if typeof(file) == "file" then return file
+    path = _get_file_relative_or_absolute(path)
+    dir = path.split("/")[:-1].join("/")
+    filename = path.split("/")[-1]
+    res = get_shell.host_computer.touch(dir, filename)
+    if not res then 
+        print(res)
+        return null
+    end if 
+    return get_shell.host_computer.File(path)
+end function

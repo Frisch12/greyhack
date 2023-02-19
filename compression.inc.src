@@ -1,0 +1,70 @@
+_create_dict_from_init_size = function (size)
+    dict = {}
+    for i in range(0, size)
+        dict[char(i)] = i
+    end for
+    return dict
+end function
+
+_create_dict_from_init_size_chars = function (size)
+    dict = {}
+    for i in range(0, size)
+        dict[i] = char(i)
+    end for
+    return dict
+end function
+
+_lzw_encode = function(str) 
+    dic_size = 256
+    sstring = ""
+    max_size = 4096
+    dict = _create_dict_from_init_size(dic_size)
+    compressed_data = []
+    for c in str
+        string_plus_symbol = sstring + c
+        if dict.hasIndex(string_plus_symbol) then
+            sstring = string_plus_symbol
+        else
+            compressed_data.push(dict[sstring])
+            if dict.len <= max_size then
+                dict[string_plus_symbol] = dic_size
+                dic_size = dic_size + 1
+            end if 
+            sstring = c
+        end if
+    end for
+    if dict.hasIndex(sstring) then
+        compressed_data.push(dict[sstring])
+    end if
+    data = []
+    for d in compressed_data
+        data.push(char(d))
+    end for
+    return data.join("")
+end function
+
+_lzw_decode = function(str)
+    dic_size = 256
+    max_size = 4096
+    compressed_data = str[:]
+    next_code = 256
+    decompressed_data = ""
+    sstring = ""
+
+    dict = _create_dict_from_init_size_chars(dic_size)
+
+    for c in compressed_data
+        code = c.code
+        if not dict.hasIndex(code) then
+            dict[code] = sstring + sstring[0]
+        end if 
+        decompressed_data = decompressed_data + dict[code]
+        if sstring.len != 0 then
+            dict[next_code] = sstring + dict[code][0]
+            next_code = next_code + 1
+        end if
+        sstring = dict[code]
+    end for
+
+    return decompressed_data
+end function

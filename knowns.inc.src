@@ -2,7 +2,11 @@ _passwords = function (folder)
     result = []
     files = folder.get_files
     for f in files
-        lines = f.get_content.split("\n")
+        content = f.get_content
+        if f.name.indexOf(".lzw") != null then
+            content = _lzw_decode(content)
+        end if
+        lines = content.split("\n")
         for l in lines
             if l.trim != "" then
                 result.push(l)
