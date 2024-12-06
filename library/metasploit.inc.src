@@ -1,0 +1,82 @@
+import_code("init.inc.src")
+import_code("exploits.inc.src")
+
+_load_remote_lib = function (metaxploit, ip, port) 
+    session = metaxploit.net_use(ip, port)
+    if not session then 
+        exit("Connection failed")
+    end if
+    metaLib = session.dump_lib
+    if not metaLib then
+        exit("Failed to get remote lib")
+    end if
+
+    return metaLib
+end function
+
+_test_exploits = function(library, exploits, parameter = "")
+    for e in exploits
+        print "Testing exploit " + e[0] + " => " + e[1]
+        result = library.overflow(e[0], e[1], parameter)
+        print result
+    end for
+end function
+
+_load_exploits = function(file) 
+    f = get_shell.host_computer.File(file)
+    content = f.get_content
+    lines = content.split("\n")
+    exploits = []
+    for c in lines
+        if c.indexOf("0x") == 0 then
+            exploits.push(c.split(":"))
+        end if
+    end for
+    return exploits
+end function
+
+_use_result = function(result, exploitType, allParams) 
+    if exploitType == "shell" then
+        return _exploit_shell(result)
+    else if exploitType == "computer" or exploitType == "computer_lan" then
+        return _exploit_computer(result)
+    else if exploitType == "ftp" then
+        return _exploit_ftp(result, allParams)
+    else if exploitType == "password" then
+        return result
+    end if
+end function
+
+__exploit_lib = function(library, exploits, additionalParam = "")
+    for e in exploits
+        print "Exploiting " + e[0] + " => " + e[1]
+        result = library.overflow(e[0], e[1], additionalParam)
+        return _use_result(result, e[2])
+    end for
+    return null
+end function
+
+_exploit_lib = function(library, exploits, exploitType, additionalParam = "")
+    root_exploits = []
+    user_exploits = []
+    guest_exploits = []
+    for e in exploits 
+        if(e[2] != exploitType) then continue
+        if(e.len < 4) then 
+            guest_exploits.push(e)
+            continue
+        end if
+        if(e[3] == "root") then
+            root_exploits.push(e)
+        else if(e[3] == "user") then
+            user_exploits.push(e)
+        else if(e[3] == "guest") then
+            guest_exploits.push(e)
+        end if
+    end for
+    result = __exploit_lib(library, root_exploits, additionalParam)
+    if(result != null) then return result
+    result = __exploit_lib(library, user_exploits, additionalParam)
+    if(result != null) then return result
+    return __exploit_lib(library, guest_exploits, additionalParam)
+end function

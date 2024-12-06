@@ -1,0 +1,57 @@
+import_code("library/basic.inc.src")
+
+shell = get_shell
+
+if params.len < 1 or params[0] == "--help" then
+	exit "scan_firewall [IP]"
+end if
+
+ip = params[0]
+check_ports = true
+if(params.len > 1) then
+	if(params[1] == "--no-ports") then
+		check_ports = false
+	end if
+end if
+
+if not shell.ping(ip) then
+	exit "Host not found"
+end if
+
+router = get_router(ip)
+if not router then
+	exit "Router not found"
+end if
+
+print "Router found: " + router.bssid_name
+print "Router IP: " + router.public_ip
+print "Router Private IP: " + router.local_ip
+print "Kernel Version: " + router.kernel_version
+
+rules = router.firewall_rules()
+print "Firewall rules: "
+print rules.join(_nl)
+
+print "Used ports: "
+used_ports = router.used_ports
+for port in used_ports
+	print "    " + port_number(port)
+end for
+
+devices = router.devices_lan_ip()
+print "LAN devices: "
+
+for device in devices
+	print device
+	d_ports = router.device_ports(device)
+	if not check_ports then
+		continue
+	end if
+	for port in d_ports
+		closed = "closed"
+		if not port.is_closed then
+			closed = "  open"
+		end if
+		print "    " + port.port_number + " " + closed
+	end for
+end for

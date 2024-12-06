@@ -1,18 +1,18 @@
-import_code("/home/dennis/programs/basic.inc.src")
+import_code("library/basic.inc.src")
 
 metaxploit = _load_metasploit
 
-_exploit_lib = function (libName, exploits) 
-    metaLib = _load_metalib(metaxploit, libName)
-    res = _test_exploits(metaLib, exploits)
-    if not res then 
-        print("Failed to exploit " + libName)
-        return null
-    end if
+_exploit_lib = function(libName, exploits)
+	metaLib = _load_metalib(metaxploit, libName)
+	res = _test_exploits(metaLib, exploits)
+	if not res then
+		print "Failed to exploit " + libName
+		return null
+	end if
 end function
 
 exploits = []
-_exploit_lib("kernel_module.so", exploits)
+_exploit_lib "kernel_module.so", exploits
 
 exploits = []
-_exploit_lib("init.so", exploits)
+_exploit_lib "init.so", exploits

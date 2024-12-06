@@ -1,0 +1,17 @@
+import_code("library/basic.inc.src")
+import_code("library/metasploit.inc.src")
+
+metaxploit = _load_metasploit
+
+if params.len < 5 or params[0] == "--help" then
+	exit "connect [IP] [PORT] [USERNAME] [PASSWORD] [SERVICE]"
+end if
+
+shell = get_shell
+service = shell.connect_service(params[0], params[1].to_int, params[2], params[3], params[4])
+
+if params[4] == "ssh" then
+    _exploit_shell(service)
+else if params[4] == "ftp" then
+    _exploit_ftp(service)
+end if

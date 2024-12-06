@@ -1,6 +1,0 @@
-router = get_router(params[0])
-devicePorts = router.device_ports(params[1])
-
-for p in devicePorts
-    print(p.port_number + " : " + router.port_info(p))
-end for

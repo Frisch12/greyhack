@@ -1,0 +1,41 @@
+_print_vuln = function(metaxploit, metaLib, results) 
+    for res in results 
+        print(res + ":")
+        scan_result = metaxploit.scan_address(metaLib, res)
+        if not scan_result then 
+            print("\tFailed!")
+            continue
+        end if 
+
+        print(scan_result)
+    end for
+end function
+
+_scan_vuln = function(metaxploit, metaLib) 
+    print("Scanning " + metaLib.lib_name + " Version " + metaLib.version)
+    results = metaxploit.scan(metaLib)
+    _print_vuln(metaxploit, metaLib, results)
+end function
+
+_vulns_to_csv = function (metaxploit, metaLib, results) 
+    resultString = ""
+    for res in results 
+        scan_result = metaxploit.scan_address(metaLib, res)
+        if not scan_result then 
+            continue
+        end if 
+    
+        lines = scan_result.split("\n")
+    
+        for line in lines
+            if(line.indexOf("Unsafe check:") != 0) then
+                continue
+            end if
+            i = line.indexOf("<b>")
+            ei = line.indexOf("</b>")
+            str = line[i + 3:ei]
+            resultString = resultString + _nl + metaLib.version + "," + res + "," + str
+        end for
+    end for
+    return resultString
+end function

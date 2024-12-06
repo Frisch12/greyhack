@@ -1,0 +1,12 @@
+cryptools = include_lib("/lib/crypto.so")
+if not cryptools then exit("Error: Missing crypto library")
+
+GetPassword = function(userPass)
+	password = cryptools.decipher(userPass)
+	return password
+end function
+
+if params.len != 1 or params[0] == "-h" or params[0] == "--help" then exit("Usage: decipher password")
+
+password = GetPassword(params[0])
+print(password)

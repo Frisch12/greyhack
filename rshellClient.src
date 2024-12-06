@@ -1,30 +1,28 @@
-import_code("/home/bigd/programs/init.inc.src")
-import_code("/home/bigd/programs/basic.inc.src")
-import_code("/home/bigd/programs/user.inc.src")
+import_code("library/init.inc.src")
+import_code("library/basic.inc.src")
+import_code("library/exploits.inc.src")
 
-metaxploit = _load_metasploit()
+metaxploit = _load_metasploit
 
-connections = metaxploit.rshell_server()
+connections = metaxploit.rshell_server
 
 i = 0
 retry = true
 shell = null
 while retry
-    for con in connections
-        whois_response = whois(con.host_computer.public_ip).split("\n")[0].split(":")[1].trim
-        print("(" + i + ") " + con.host_computer.public_ip + " - " + con.host_computer.local_ip + " - " + whois_response)
-        i = i+1
-    end for
-    selection = user_input("Selection: ")
-    if typeof(selection.to_int) == "number" then
-        s = selection.to_int
-        if connections.len > s then
-            shell = connections[s]
-            retry = false
-        end if 
-    end if 
+	for con in connections
+		whois_response = whois(con.host_computer.public_ip).split("\n")[0].split(":")[1].trim
+		print "(" + i + ") " + con.host_computer.public_ip + " - " + con.host_computer.local_ip + " - " + whois_response
+		i += 1
+	end for
+	selection = user_input("Selection: ")
+	if typeof(selection.to_int) == "number" then
+		s = selection.to_int
+		if connections.len > s then
+			shell = connections[s]
+			retry = false
+		end if
+	end if
 end while
 
-_init_prompter(shell)
-
-shell.start_terminal
+_exploit_shell(shell)

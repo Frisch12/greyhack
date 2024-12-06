@@ -1,6 +1,6 @@
 prefix = []
 
-for i in params[0].split(".")
+for i in params[0].split("\.")
     prefix.push(i.to_int)
 end for
 

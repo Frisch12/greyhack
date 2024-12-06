@@ -1,2 +1,5 @@
 local
-online/GreyHack_online
+public
+
+build
+.node-persist

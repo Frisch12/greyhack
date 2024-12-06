@@ -1,11 +1,11 @@
-import_code("/home/bigd/programs/basic.inc.src")
-import_code("/home/bigd/programs/scan.inc.src")
+import_code("library/basic.inc.src")
+import_code("library/scan.inc.src")
 
-metaxploit = _load_metasploit()
+metaxploit = _load_metasploit
 
 if params.len == 0 or params[0] == "--help" then
-	exit("scan [library]")
+	exit "scan [library]"
 end if
 metaLib = _load_metalib(metaxploit, params[0])
 
-_scan_vuln(metaxploit, metaLib)
+_scan_vuln metaxploit, metaLib

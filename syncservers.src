@@ -1,31 +1,61 @@
-servers = get_shell.host_computer.File("/home/" + active_user + "/servers.txt").get_content.split("\n")
+import_code("library/basic.inc.src")
+import_code("library/json/json.src")
 
-programs = get_shell.host_computer.File("/home/bigd/programs")
+programs = get_shell.host_computer.File("/home/bigd")
 usrbin = get_shell.host_computer.File("/usr/bin")
+bin = get_shell.host_computer.File("/bin")
 lib = get_shell.host_computer.File("/lib")
 
-_sync_bin = function (remote)
+binaries = ["rshell-server", "scanrouter", "decipher", "aircrack", "aireplay", "airmon"]
+libs = ["librshell.so", "crypto.so", "metaxploit.so"]
+
+_sync_file = function(remote, source, dest) 
+    print("Syncing: " + source)
+    res = get_shell.scp(source, dest, remote)
+end function
+
+_sync_bin = function (remote, remoteUser)
+    homeDir = "/home/" + remoteUser + "/"
+    if(remoteUser == "root") then homeDir = "/root/"
+
     for f in programs.get_files()
-        if f.path.indexOf(".inc.") != null then continue end if
-        name = f.name.split(".src")[0]
-        res = get_shell.scp("/bin/" + name, "/bin/", remote)
+        if f.path.indexOf(".src") != null then continue
+        if f.path.indexOf(".conf") != null then continue
+        if f.path.indexOf(".txt") != null then continue
+        if f.name.indexOf(".") != null then continue
+        name = f.name
+        print("Syncing: " + name)
+        res = get_shell.scp(home_dir + "/" + name, homeDir, remote)
         if typeof(res) != "number" then print("Failed: " + res)
     end for
     for f in usrbin.get_files()
         name = f.name
+        print("Syncing: " + name)
         res = get_shell.scp("/usr/bin/" + name, "/usr/bin/", remote)
         if typeof(res) != "number" then print("Failed: " + res)
     end for
-    for f in lib.get_files()
-        name = f.name
+    for f in binaries
+        name = f
+        print("Syncing: " + name)
+        res = get_shell.scp("/bin/" + name, homeDir, remote)
+        if typeof(res) != "number" then print("Failed: " + res)
+    end for
+    for f in libs
+        name = f
+        print("Syncing: " + name)
         res = get_shell.scp("/lib/" + name, "/lib/", remote)
         if typeof(res) != "number" then print("Failed: " + res)
     end for
 end function
 
-for server in servers 
-    server_parts = server.split(":")
-    if(server_parts.len < 4) then continue
-    server_shell = get_shell.connect_service(server_parts[0], server_parts[1].to_int, server_parts[2], server_parts[3])
-    _sync_bin(server_shell)
+servers = JSON.parse(get_shell.host_computer.File(home_dir + "/Config/Map.conf").get_content)
+
+for account in servers["accounts"] 
+    server_shell = get_shell.connect_service(account["ip"], 22, account["user"], account["password"])
+    if params.len > 0 then
+        _sync_file(server_shell, params[0], params[1])
+    else 
+        _sync_bin(server_shell, account["user"])
+    end if
 end for
+

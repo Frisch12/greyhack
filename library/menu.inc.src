@@ -1,0 +1,10 @@
+_show_menu = function (options, default)
+    for option in range(0, options.len - 1)
+        print str(option) + " - " + options[option]
+    end for
+    choice = user_input("Please select an option (" + default + "): ")
+    if choice == "" then
+        choice = default
+    end if
+    return choice
+end function

@@ -1,22 +1,22 @@
-import_code("/home/bigd/programs/basic.inc.src")
- 
+import_code("library/basic.inc.src")
+
 bc = _load_lib("blockchain.so")
 // Get coin and store it in the coin variable. Use the details from the previous step.
-//Usage e.g: coin = bc.get_coin("BTC","myusername","mypassword")
-coin = bc.get_coin("BTC","bigd","bigd")
-print(coin)
-//Get subwallet to mine to (subwallet username setup in the last step)
+// Usage e.g: coin = bc.get_coin("BTC","myusername","mypassword")
+coin = bc.get_coin("BTC", "bigd", "bigd")
+print coin
+// Get subwallet to mine to (subwallet username setup in the last step)
 subwallet = coin.get_subwallet(user_input("Wallet User:"))
-//Prints subwallet if the wallet was gotten correctly , if there is an error prints the error string
-print(subwallet)
+// Prints subwallet if the wallet was gotten correctly , if there is an error prints the error string
+print subwallet
 
 
-print("Starting Mining...")
-//Mine till process is stopped with ctrl-c
-while 1==1
-        //Start Mining 
+print "Starting Mining..."
+// Mine till process is stopped with ctrl-c
+while 1 == 1
+	// Start Mining 
 	subwallet.mining
-        //Print the balance and success message when the user running the script mines a chunk
-	print("Chunk mined")
-	print("Balance: " + subwallet.get_balance)
+	// Print the balance and success message when the user running the script mines a chunk
+	print "Chunk mined"
+	print "Balance: " + subwallet.get_balance
 end while

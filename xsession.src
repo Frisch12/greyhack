@@ -1,0 +1,7 @@
+import_code("library/basic.inc.src")
+
+metaxploit = _load_metasploit
+
+if params.len != 1 or params[0] == "-h" or params[0] == "--help" then exit("<b>Usage: " + program_path.split("/")[-1] + " [name]</b>")
+
+metaxploit.rshell_client "38.189.38.103", 1222, params[0]

@@ -1,13 +1,14 @@
 input = user_input("Are you sure: ")
 
-if input != "yes" then exit
+if input != "yes" then
+    exit
+end if
 
-FILENAMES=["metaxploit.so"]
-
-USERNAME="bigd"
+USERNAME="#envar USERNAME"
 
 _cleanup_file = function (file)
-    if file.owner == "bigd" then
+    file.chmod("777")
+    if file.owner == USERNAME then
         print("Delete " + file.path)
         file.delete
     end if

@@ -1,0 +1,9 @@
+import_code("library/init.inc.src")
+
+if params.len < 1 or params[0] == "-h" or params[0] == "--help" then exit("rmf [FILE] [[CURRENT_USER]]")
+
+file = get_shell.host_computer.File(params[0])
+if not file then exit("File not found")
+user = active_user
+if(params.len > 1) then user = params[1]
+_force_delete_file(file, user)

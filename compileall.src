@@ -1,8 +1,0 @@
-dir = get_shell.host_computer.File("/home/bigd/programs")
-
-for f in dir.get_files()
-    if f.path.indexOf(".inc.") != null then continue end if
-    print("Compile " + f.path)
-    result = get_shell.build(f.path, "/bin")
-    print(result)
-end for
