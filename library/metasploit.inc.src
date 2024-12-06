@@ -41,9 +41,11 @@ _use_result = function(result, exploitType, allParams)
     else if exploitType == "computer" or exploitType == "computer_lan" then
         return _exploit_computer(result)
     else if exploitType == "ftp" then
-        return _exploit_ftp(result, allParams)
+        return _exploit_ftp(result)
     else if exploitType == "password" then
         return result
+    else if exploitType == "file" then
+        return _exploit_file(result)
     end if
 end function
 

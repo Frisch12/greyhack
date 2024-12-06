@@ -7,19 +7,48 @@ metaxploit = _load_metasploit
 connections = metaxploit.rshell_server
 
 i = 0
+public_ips = []
+selected_public_ip = null
+for con in connections
+	whois_response = whois(con.host_computer.public_ip).split("\n")[0].split(":")[1].trim
+	if public_ips.indexOf(con.host_computer.public_ip) == null then
+		public_ips.push(con.host_computer.public_ip)
+		print "(" + i + ") " + con.host_computer.public_ip + " - " + whois_response
+		i += 1
+	end if
+end for
+
+retry = true
+while retry
+	selection = user_input("Selection: ")
+	if typeof(selection.to_int) == "number" then
+		s = selection.to_int
+		if public_ips.len > s then
+			selected_public_ip = public_ips[s]
+			retry = false
+		end if
+	end if
+end while
+
 retry = true
 shell = null
+whois_response = whois(selected_public_ip).split("\n")[0].split(":")[1].trim
 while retry
+	i = 0
+	cons = []
+	print("Selected " + selected_public_ip + " - " + whois_response)
 	for con in connections
-		whois_response = whois(con.host_computer.public_ip).split("\n")[0].split(":")[1].trim
-		print "(" + i + ") " + con.host_computer.public_ip + " - " + con.host_computer.local_ip + " - " + whois_response
-		i += 1
+		if(con.host_computer.public_ip == selected_public_ip) then
+			print "(" + i + ") " + con.host_computer.local_ip
+			cons.push(con)
+			i += 1
+		end if
 	end for
 	selection = user_input("Selection: ")
 	if typeof(selection.to_int) == "number" then
 		s = selection.to_int
-		if connections.len > s then
-			shell = connections[s]
+		if cons.len > s then
+			shell = cons[s]
 			retry = false
 		end if
 	end if

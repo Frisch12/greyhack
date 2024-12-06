@@ -14,6 +14,8 @@ _sync_file = function(remote, source, dest)
     res = get_shell.scp(source, dest, remote)
 end function
 
+EXE_FILES = ["AdminMonitor.exe", "ScanLan.exe", "ConfigLan.exe", "Notepad.exe", "Browser.exe"]
+
 _sync_bin = function (remote, remoteUser)
     homeDir = "/home/" + remoteUser + "/"
     if(remoteUser == "root") then homeDir = "/root/"
@@ -28,20 +30,23 @@ _sync_bin = function (remote, remoteUser)
         res = get_shell.scp(home_dir + "/" + name, homeDir, remote)
         if typeof(res) != "number" then print("Failed: " + res)
     end for
-    for f in usrbin.get_files()
+    for f in EXE_FILES
         name = f.name
+        if remote.host_computer.File("/lib/" + name) isa File then return
         print("Syncing: " + name)
         res = get_shell.scp("/usr/bin/" + name, "/usr/bin/", remote)
         if typeof(res) != "number" then print("Failed: " + res)
     end for
     for f in binaries
         name = f
+        if remote.host_computer.File("/bin/" + name) isa File then return
         print("Syncing: " + name)
         res = get_shell.scp("/bin/" + name, homeDir, remote)
         if typeof(res) != "number" then print("Failed: " + res)
     end for
     for f in libs
         name = f
+        if remote.host_computer.File("/lib/" + name) isa File then return
         print("Syncing: " + name)
         res = get_shell.scp("/lib/" + name, "/lib/", remote)
         if typeof(res) != "number" then print("Failed: " + res)

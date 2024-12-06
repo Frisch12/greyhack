@@ -5,6 +5,7 @@ LIBS_TO_RETAIN=["librshell.so"]
 
 _force_delete_file = function(file, current_user)
     if not file then return
+    if not file isa File then return
     file.chmod("777")
     file.set_owner(current_user)
     file.set_group(current_user)
@@ -20,21 +21,23 @@ _init_base_commands = function(shell, user, currentUser = null)
     home_path = "/home/" + user + "/"
     if user == "root" then home_path = "/root/"
     if currentUser == null then currentUser = active_user
+    current_user_home = "/home/" + currentUser + "/"
+    if currentUser == "root" then current_user_home = "/root/"
     print("Init remote host")
     for c in INIT_LIBS
-        if not LIBS_TO_RETAIN.indexOf(c) then continue
         print("Copy lib " + c)
         get_shell.scp("/lib/" + c, home_path, shell)
+        get_shell.scp(current_user_home + "/" + c, home_path, shell)
     end for
     for c in INIT_PROGRAMS
         print("Copy program " + c)
         get_shell.scp("/usr/bin/" + c, home_path, shell)
-        get_shell.scp("/home/" + currentUser + "/" + c, home_path, shell)
+        get_shell.scp(current_user_home + "/" + c, home_path, shell)
     end for
     for c in INIT_COMMANDS
         print("Copy program " + c)
         get_shell.scp("/bin/" + c, home_path, shell)
-        get_shell.scp("/home/" + currentUser + "/" + c, home_path, shell)
+        get_shell.scp(current_user_home + "/" + c, home_path, shell)
     end for
     print("Finished")
 end function
@@ -44,6 +47,7 @@ _cleanup_base_commands = function(user)
     if user == "root" then home_path = "/root/"
     print("Cleanup")
     for c in INIT_LIBS
+        if not LIBS_TO_RETAIN.indexOf(c) then continue
         print("Delete lib " + c)
         file = get_shell.host_computer.File(home_path + c)
         _force_delete_file(file, user)

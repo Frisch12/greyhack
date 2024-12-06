@@ -1,23 +1,7 @@
+import_code("library/exploits.inc.src")
+
 input = user_input("Are you sure: ")
 
 if input == "yes" then
-    boot = get_shell.host_computer.File("/boot")
-    for f in boot.get_files
-        print("Delete " + f.name)
-        f.delete
-    end for
-    
-    sys = get_shell.host_computer.File("/sys")
-    for f in sys.get_files
-        print("Delete " + f.name)
-        f.delete
-    end for
-    
-    etc = get_shell.host_computer.File("/etc")
-    for f in etc.get_files
-        print("Delete " + f.name)
-        f.delete
-    end for
-    
-    print("Finished")
+    _computer_corrupt(get_shell.host_computer, active_user)
 end if 
